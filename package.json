@@ -1,0 +1,26 @@
+{
+  "name": "vue-state-tree",
+  "version": "0.1.0",
+  "description": "type-checked, immutable, Vue state management",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "repository": "https://github.com/jaythomas/vue-state-tree",
+  "author": "Jay Thomas <jay@gfax.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "lodash.get": ">=4",
+    "vue": ">=2.2"
+  },
+  "scripts": {
+    "build": "babel -o index.js index.esm.js",
+    "test": "babel -o index.js index.esm.js && babel -o intermediate.js index.spec.js && node intermediate && rm intermediate.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "chalk": "^4.0.0",
+    "flush-promises": "^1.0.2"
+  }
+}
